@@ -1,2 +1,2 @@
 # DVA117
-Programs for my courses
+Folders with all codes that ive made for my programming course
