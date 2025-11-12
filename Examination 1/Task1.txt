@@ -1,0 +1,61 @@
+Change 1: Task1.c:6:10: error: use of undeclared identifier 'b'
+    6 |   int a; b, c;
+      |          ^
+Task1.c:6:13: error: use of undeclared identifier 'c'
+    6 |   int a; b, c;
+      |             ^
+Task1.c:8:3: error: use of undeclared identifier 'b'
+    8 |   b = 2; 
+      |   ^
+Task1.c:9:3: error: use of undeclared identifier 'c'
+    9 |   c = 3;
+      |   ^
+Task1.c:11:44: error: use of undeclared identifier 'b'
+   11 |  printf("Variable a:%d, b:%d, c:%d \n", a, b, c);
+      |                                            ^
+Task1.c:11:47: error: use of undeclared identifier 'c'
+   11 |  printf("Variable a:%d, b:%d, c:%d \n", a, b, c);
+      |                                               ^
+6 errors generated.
+
+Change 2: Task1.c:11:2: error: call to undeclared function 'prinf'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   11 |  prinf("Variable a:%d, b:%d, c:%d \n", a, b, c);
+      |  ^
+Task1.c:11:2: note: did you mean 'printf'?
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_printf.h:34:6: note: 'printf' declared here
+   34 | int      printf(const char * __restrict, ...) __printflike(1, 2);
+      |          ^
+
+Change 3: Task1.c:11:9: warning: missing terminating '"' character [-Winvalid-pp-token]
+   11 |  printf("Variable a:%d, b:%d, c:%d \n, a, b, c);
+      |         ^
+Task1.c:11:9: error: expected expression
+Task1.c:14:2: error: expected '}'
+   14 | }
+      |  ^
+Task1.c:5:1: note: to match this '{'
+    5 | {
+      | ^
+1 warning and 2 errors generated.
+
+Change 4: Task1.c:6:16: error: redefinition of 'c'
+    6 |   int a, b, c, c;
+      |                ^
+Task1.c:6:13: note: previous definition is here
+    6 |   int a, b, c, c;
+      |             ^
+1 error generated.
+
+Change 5: Task1.c:11:49: error: expected ';' after expression
+   11 |  printf("Variable a:%d, b:%d, c:%d \n", a, b, c)
+      |                                                 ^
+      |                                                 ;
+1 error generated.
+
+Change 6: Task1.c:13:1: error: expected '}'
+   13 | 
+      | ^
+Task1.c:5:1: note: to match this '{'
+    5 | {
+      | ^
+1 error generated.
