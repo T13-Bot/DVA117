@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 int main(void){
-    float price = 0;
-    float tax = 0;
-    float total = 0;
-    float vat = 0;
-    float tax2 = 0;
+    float price;
+    float tax;
+    float total;
+    float vat;
+    float tax2;
 
     printf("Price of article (including VAT): ");
     scanf("%f", &price);
