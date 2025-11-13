@@ -7,24 +7,20 @@ int main(void){
     float tax = 0;
     float total = 0;
     float vat = 0;
+    float tax2 = 0;
 
     printf("Price of article (including VAT): ");
     scanf("%f", &price);
 
-    printf("Enter VAT: %%");
+    printf("Enter VAT: ");
     scanf("%f", &tax);
 
-    tax / 100;
-    tax + 1;
-    
+    vat = tax / 100 + 1;
+    total = price / (1 + tax / 100);
+    tax2 = price - total;
 
-    printf("%f", tax);
-
-
-    printf("The price of the product is %f\n", price);
-    printf("The VAT of the product is: %% %f\n", tax);
-    printf("Price excluding VAT is: %f", total);
-    printf("The VAT is: ", vat);
+    printf("The price excluding VAT is: %.2f\n", total);
+    printf("The VAT is: %.2f", tax2);
 
     return 0;
 }
